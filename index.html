@@ -20,22 +20,39 @@
             height: 480px;
             
         }
+        .centered-container{
+            display: flex;
+            justify-content: center;
+        }
+        .text-color{
+            color:#808080;
+        }
+
 
     </style>
 
-    <title>Refreshing data with setInterval()</title>
+    <title>Where is the International Space Station now?</title>
 </head>
 
 <body>
 
 
-    <h1>Where is the ISS?</h1>
-    <p>
-        Latitude: <span id="lat"></span>°</br>
-        Longitude: <span id="lon"></span>°
-    </p>
+    <div class="centered-container text-color">
+        <h1 >Where is the International Space Station (ISS) now?</h1>
+    </div>
+
+    <div class="centered-container text-color">
+        <p>
+            Latitude: <span id="lat"></span>°</br>
+            Longitude: <span id="lon"></span>°
+        </p>
+    </div>
+  
+
 
     <div id="issMap"></div>
+
+    <sub style="float: right; color: #808080">* This map updates every 3 seconds with real data coming from NASA.</sub>
 
     <script>
         // Making a map and tiles
@@ -80,7 +97,7 @@
 
         getISS(); // Happen on load
 
-        setInterval(getISS, 3000); // Refresh every 1 sec
+        setInterval(getISS, 3000); // Refresh every 3 sec
 
 
     </script>
